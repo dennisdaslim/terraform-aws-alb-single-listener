@@ -46,7 +46,7 @@ resource "aws_lb_listener" "main" {
   certificate_arn   = var.listener_certificate_arn
 
   default_action {
-    target_group_arn = aws_lb_target_group.init_active.arn
+    target_group_arn = aws_lb_target_group.default.arn
     type             = "forward"
   }
 
@@ -55,7 +55,7 @@ resource "aws_lb_listener" "main" {
   }
 }
 
-resource "aws_lb_target_group" "init_active" {
+resource "aws_lb_target_group" "default" {
   name                 = local.tg_name
   port                 = var.tg_port
   protocol             = var.tg_protocol

@@ -19,17 +19,17 @@ output "lb_arn_suffix" {
 }
 
 output "tg_active_arn" {
-  value       = aws_lb_target_group.init_active.arn
+  value       = aws_lb_target_group.default.arn
   description = "The arn of the active target group"
 }
 
 output "tg_active_arn_suffix" {
-  value       = aws_lb_target_group.init_active.arn_suffix
+  value       = aws_lb_target_group.default.arn_suffix
   description = "The arn suffix of the active target group, useful with CloudWatch Metrics"
 }
 
 output "tg_active_name" {
-  value       = aws_lb_target_group.init_active.name
+  value       = aws_lb_target_group.default.name
   description = "The name of the active target group"
 }
 
